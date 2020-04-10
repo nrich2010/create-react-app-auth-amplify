@@ -1,0 +1,7 @@
+{
+    "devq": {
+        "configLevel": "project",
+        "useProfile": true,
+        "profileName": "Amplify"
+    }
+}

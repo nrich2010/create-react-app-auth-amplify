@@ -1,0 +1,58 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaFunction": "auth",
+            "privacy": {
+                "private": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH"
+                ]
+            }
+        },
+        {
+            "name": "/guest",
+            "lambdaFunction": "unauth",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "api",
+    "apiName": "api",
+    "functionArns": [
+        {
+            "lambdaFunction": "auth"
+        },
+        {
+            "lambdaFunction": "unauth"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 0,
+        "authRoleName": "amplify-authcra-devq-202249-authRole",
+        "unAuthRoleName": "amplify-authcra-devq-202249-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "auth",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "unauth",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

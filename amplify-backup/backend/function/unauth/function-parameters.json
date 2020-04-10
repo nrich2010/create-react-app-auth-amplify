@@ -1,0 +1,14 @@
+{
+    "permissions": {
+        "auth": {
+            "cognitocf0c6096": [
+                "read"
+            ]
+        },
+        "storage": {
+            "dynamo90a59755": [
+                "read"
+            ]
+        }
+    }
+}
